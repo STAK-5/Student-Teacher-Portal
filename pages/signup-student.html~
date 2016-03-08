@@ -1,0 +1,17 @@
+<form class="form" role="form id=signUpForm" novalidate name="signupForm" ng-class="has-sucess">
+<div class="form-group">
+    <br>
+    <input type="text" class="form-control" id="user-name" placeholder="Username" required>
+    <br>
+    <input type="text" class="form-control" id="roll-no" name="rollNo" ng-model="OfficialRollNo" placeholder="Roll No. (eg. D-14-CS-00)" ng-pattern="/^[D]{1}-[0-9]{2}-[A-Z]{2}-[0-9]{2,3}$/" ng-aria>
+    <span class="help-block" ng-show="signupForm.$dirty && signupForm.rollNo.$invalid">Enter Roll No. in correct format. (eg. D-14-CS-00)</span>
+
+    <input type="email" class="form-control" id="emailField" placeholder="Email address">
+    <br>
+    <input type="password" class="form-control" id="passwordField" placeholder="Password">
+    <br>
+    <button type="button" class="btn btn-primary btn-md btn-block"><strong>Sign up</strong></button>
+    <br>
+    <h4 class="text-center">Already a member? <a href="#/">Sign in.</a></h4>
+</div>
+</form>

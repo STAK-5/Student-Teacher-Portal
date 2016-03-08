@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Dashboard</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/dashboard-style.css" rel="stylesheet">
+
+    </head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Dawood University of Enginnering and Technology</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Search...">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <!--ArchitectureAndPlanning-->
+
+                <!--ComputerSystemEngg-->
+
+                <li id="CS" class="active">
+                    <a data-toggle="collapse" data-target="#CSMenu" data-parent="LikhnaHai"href="#">
+                        Computer System Engg.
+                    </a>
+                    <div id="CSMenu" class="collapse">
+                        <ul class="panel nav">
+                            <li><a data-toggle="collapse" data-target="#CSFall" data-parent="CSMenu" href="#">Fall</a>
+                                <div id="CSFall" class=" sublinks collapse">
+                                    <ul class="nav">
+                                        <li><a href="#">1<sup>st</sup> year</a></li>
+                                        <li><a href="#">2<sup>nd</sup> year</a></li>
+                                        <li><a href="#">3<sup>rd</sup> year</a></li>
+                                        <li><a href="#">4<sup>th</sup> year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a data-toggle="collapse" data-target="#CSSpring" data-parent="CSMenu" href="#">Spring</a>
+                                <div id="CSSpring" class=" sublinks collapse">
+                                    <ul class="nav">
+                                        <li><a href="#">1<sup>st</sup> year</a></li>
+                                        <li><a href="#">2<sup>nd</sup> year</a></li>
+                                        <li><a href="#">3<sup>rd</sup> year</a></li>
+                                        <li><a href="#">4<sup>th</sup> year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!--ComputerSystemEngg-->
+                <!--ComputerSystemEngg-->
+                <!--ComputerSystemEngg-->
+                <!--ComputerSystemEngg-->
+                <!--ComputerSystemEngg-->
+                <!--ComputerSystemEngg-->
+
+                <li><a href="#">Electronics Engg.</a></li>
+                <li><a href="#">Energy & Environment Engg.</a></li>
+                <li><a href="#">Industrial & Management Engg.</a></li>
+                <li><a href="#">Metallurgy & Materials Engg.</a></li>
+                <li><a href="#">Petrolem & Gas Engg.</a></li>
+                <li><a href="#">Telecom Engg.</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Important Uploads</div>
+                <div class="table-responsive table-stripped">
+                <!-- Table -->
+                <table class="table table-hover">
+                    <tbody>
+                        <tr>
+                            <th>File Type</th>
+                            <th>Title</th>
+                            <th>Important Note</th>
+                            <th>File Size</th>
+                            <th>Uploaded By</th>
+                            <th>Download</th>
+                        </tr>
+                        <tr>
+                            <td>{{ File.name }}</td><td>{{ File.title }}</td><td>{{ File.important }}</td><td>{{ File.size }}</td><td>{{ File.uploader }}</td><td><input type="button" value="Download" class="btn btn-primary"></td>
+                        </tr>
+                        <tr>
+                            <td>{{ File.name }}</td><td>{{ File.title }}</td><td>{{ File.important }}</td><td>{{ File.size }}</td><td>{{ File.uploader }}</td><td><input type="button" value="Download" class="btn btn-primary"></td>
+                        </tr>
+                        <tr>
+                            <td>{{ File.name }}</td><td>{{ File.title }}</td><td>{{ File.important }}</td><td>{{ File.size }}</td><td>{{ File.uploader }}</td><td><input type="button" value="Download" class="btn btn-primary"></td>
+                        </tr>
+                        <tr>
+                            <td>{{ File.name }}</td><td>{{ File.title }}</td><td>{{ File.important }}</td><td>{{ File.size }}</td><td>{{ File.uploader }}</td><td><input type="button" value="Download" class="btn btn-primary"></td>
+                        </tr>
+                        <tr>
+                            <td>{{ File.name }}</td><td>{{ File.title }}</td><td>{{ File.important }}</td><td>{{ File.size }}</td><td>{{ File.uploader }}</td><td><input type="button" value="Download" class="btn btn-primary"></td>
+                        </tr>
+                        <tr>
+                            <td>{{ File.name }}</td><td>{{ File.title }}</td><td>{{ File.important }}</td><td>{{ File.size }}</td><td>{{ File.uploader }}</td><td><input type="button" value="Download" class="btn btn-primary"></td>
+                        </tr>
+                        <tr>
+                            <td>{{ File.name }}</td><td>{{ File.title }}</td><td>{{ File.important }}</td><td>{{ File.size }}</td><td>{{ File.uploader }}</td><td><input type="button" value="Download" class="btn btn-primary"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <nav class="float-right">
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../js/jquery-2.2.0.js"></script>
+<script src="../js/bootstrap.js"></script>
+</body>
+</html>
