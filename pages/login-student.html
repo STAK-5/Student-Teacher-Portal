@@ -10,6 +10,7 @@
                placeholder="Email address"
                required
                ng-model="studentLoginEmail"
+               ng-model-options="{ updateOn: 'blur' }"
 
         >
         <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': studentLogin.loginStudentEmail.$valid,
@@ -34,6 +35,7 @@
                ng-model="studentLoginPassword"
                ng-minlength="8"
                ng-maxlength="32"
+               ng-model-options="{ updateOn: 'blur' }"
         >
         <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': studentLogin.studentLoginPassword.$valid,
                                                                     'glyphicon-remove': studentLogin.studentLoginPassword.$touched && studentLogin.studentLoginPassword.$invalid

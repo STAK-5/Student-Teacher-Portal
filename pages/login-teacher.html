@@ -10,7 +10,8 @@
                placeholder="Email address"
                required
                ng-model="teacherEmail"
-               >
+               ng-model-options="{ updateOn: 'blur' }"
+        >
     <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': teacherForm.teacherEmail.$valid,
                                                                 'glyphicon-remove': teacherForm.teacherEmail.$touched && teacherForm.teacherEmail.$invalid
                                                              }"
@@ -33,7 +34,9 @@
                ng-model="teacherPassword"
                ng-minlength="8"
                ng-maxlength="32"
-        ><span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': teacherForm.teacherPassword.$valid,
+
+        >
+        <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': teacherForm.teacherPassword.$valid,
                                                                 'glyphicon-remove': teacherForm.teacherPassword.$touched && teacherForm.teacherPassword.$invalid
                                                              }"
                 aria-hidden="true"></span>
