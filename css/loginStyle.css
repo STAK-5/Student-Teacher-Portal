@@ -5,8 +5,14 @@
 	opacity: 0.85;
 }
 .nav-color{
-	background: #042b48;
+	background-color: transparent;
+
 }
+
+#fontColor{
+	color: #f7e1b5;
+}
+
 .em-text{
 	color: white !important;
 }

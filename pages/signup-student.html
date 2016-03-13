@@ -1,17 +1,17 @@
-<form class="form" role="form id=signUpForm" novalidate name="signupForm" ng-class="has-sucess">
+<form class="form" role="form" id=signUpForm" novalidate name="signupForm" ng-class="has-sucess">
 <div class="form-group">
     <br>
-    <input type="text" class="form-control" id="user-name" placeholder="Username" required>
+    <input type="text" class="form-control" id="user-name" placeholder="Username" required="required">
     <br>
-    <input type="text" class="form-control" id="roll-no" name="rollNo" ng-model="officialRollNo" placeholder="Roll No. (eg. D-14-CS-00 or D-14-CS-000)" ng-pattern="/^[D]{1}-[0-9]{2}-[A-Z]{2}-[0-9]{2,3}$/" required >
+    <input type="text" class="form-control" id="roll-no" name="rollNo" ng-model="officialRollNo" placeholder="Roll No. (eg. D-14-CS-00 or D-14-CS-000)" ng-pattern="/^[D]{1}-[0-9]{2}-[A-Z]{2}-[0-9]{2,3}$/" required="required" >
     <br ng-show="signupForm.$pristine || signupForm.rollNo.$valid"/>
     <span class="help-block" ng-show="signupForm.$dirty && signupForm.rollNo.$invalid">Enter Roll No. in correct format. (eg. D-14-CS-00 or D-14-CS-000)</span>
-    <input type="email" class="form-control" id="emailField" placeholder="Email address">
+    <input type="email" class="form-control" id="emailField" placeholder="Email address" required="required">
     <br>
-    <input type="password" class="form-control" id="passwordField" placeholder="Password">
+    <input type="password" class="form-control" id="passwordField" placeholder="Password" required="required">
     <br>
     <button type="button" class="btn btn-primary btn-md btn-block"><strong>Sign up</strong></button>
     <br>
-    <h4 class="text-center">Already a member? <a href="#/">Sign in.</a></h4>
+    <h4 class="text-center"><a href="#/">Already a member?</a></h4>
 </div>
 </form>

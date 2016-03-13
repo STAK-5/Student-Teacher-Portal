@@ -13,13 +13,26 @@
 	</head>
 	<body ng-class="{'student-bg': tab === 1, 'teacher-bg': tab === 2}">
 
-		<div class="container">
+	<header>
+		<nav class="navbar navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand em-text navbar-left" href="#/" ng-click="tab = 1">Dawood University of Engineering and Technology</a>
+
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
 					<div class="jumbotron jumb">
 						<ul class="nav nav-tabs nav-justified" ng-init="tab = 1">
-							<li role="presentation" ng-class="{ active: tab === 1}"><a href="#/" ng-click="tab = 1">I'm a Student</a></li>
-							<li role="presentation" ng-class="{ active: tab === 2}"><a href="#/teacher-login" ng-click="tab = 2">I'm a Teacher</a></li>
+							<li role="presentation" ng-class="{ active: tab === 1}"><a href="#/" ng-click="tab = 1">Student</a>
+							</li>
+							<li role="presentation" ng-class="{ active: tab === 2}"><a href="#/teacher-login" ng-click="tab = 2">Teacher</a>
+							</li>
 						</ul>
 						<div ng-view ng-cloak></div>
 					</div>
@@ -27,23 +40,19 @@
 			</div>
 		</div>
 
-		<footer>
-			<nav class="navbar navbar-default navbar-fixed-bottom nav-color">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<a class="navbar-brand em-text navbar-left" href="#/" ng-click="tab = 1">Dawood University of Engineering and Technology</a>
+	<footer>
+		<nav class="nav navbar-fixed-bottom navbar-right nav-color">
+			<div class="container">
+				<div class="navbar-header navbar-right">
+					<a class="navbar-brand em-text navbar-right" href="#/" ng-click="tab = 1"><span id = "fontColor">STAK Developers</span></a>
 
-					</div>
-					<div id="navbar" class="collapse navbar-collapse navbar-right">
-						<div class="nav navbar-brand navbar-nav">
-							STAK Developers
-						</div>
-					</div>
 				</div>
-			</nav>
-		</footer>
+			</div>
+		</nav>
+	</footer>
 
-		<!--Scripts-->
+
+	<!--Scripts-->
 
 		<script src="js/angular.js"></script>
 		<script src="js/angular-route.js"></script>

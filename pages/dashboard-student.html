@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
+    <!--<meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-
+-->
     <title>Dashboard</title>
 
     <!-- Bootstrap core CSS -->
@@ -49,56 +49,265 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
-            <ul class="nav nav-sidebar">
-                <!--ArchitectureAndPlanning-->
 
-                <!--ComputerSystemEngg-->
-
-                <li id="CS" class="active">
-                    <a data-toggle="collapse" data-target="#CSMenu" data-parent="LikhnaHai"href="#">
-                        Computer System Engg.
-                    </a>
-                    <div id="CSMenu" class="collapse">
-                        <ul class="panel nav">
-                            <li><a data-toggle="collapse" data-target="#CSFall" data-parent="CSMenu" href="#">Fall</a>
-                                <div id="CSFall" class=" sublinks collapse">
-                                    <ul class="nav">
-                                        <li><a href="#">1<sup>st</sup> year</a></li>
-                                        <li><a href="#">2<sup>nd</sup> year</a></li>
-                                        <li><a href="#">3<sup>rd</sup> year</a></li>
-                                        <li><a href="#">4<sup>th</sup> year</a></li>
+            <div id="sideMenu">
+                <ul class="panel nav nav-sidebar">
+                    <li><a class="active" data-toggle="collapse" data-target="#APMenu" data-parent="#sideMenu" href="#">
+                        Architecture and Planning
+                        <span class="sr-only">(current)</span></a></li>
+                    <div id="APMenu" class="sublinks collapse">
+                        <div id=APcollapse>
+                            <ul class="panel nav nav-sidebar">
+                                <li><a data-toggle="collapse" data-target="#APFall" data-parent=#APcollapse href="#">Fall</a></li>
+                                <div id="APFall" class="sublinks collapse">
+                                    <ul class="nav nav-sidebar">
+                                        <li><a href="#" class="small">1<sup>st</sup></a></li>
+                                        <li><a href="#" class="small">2<sup>nd</sup></a></li>
+                                        <li><a href="#" class="small">3<sup>rd</sup></a></li>
+                                        <li><a href="#" class="small">4<sup>th</sup></a></li>
                                     </ul>
                                 </div>
-                            </li>
-                            <li><a data-toggle="collapse" data-target="#CSSpring" data-parent="CSMenu" href="#">Spring</a>
-                                <div id="CSSpring" class=" sublinks collapse">
-                                    <ul class="nav">
-                                        <li><a href="#">1<sup>st</sup> year</a></li>
-                                        <li><a href="#">2<sup>nd</sup> year</a></li>
-                                        <li><a href="#">3<sup>rd</sup> year</a></li>
-                                        <li><a href="#">4<sup>th</sup> year</a></li>
+                                <li><a data-toggle="collapse" data-target="#APSpring" data-parent=#APcollapse href="#">Spring</a></li>
+                                <div id="APSpring" class="sublinks collapse">
+                                    <ul class="nav nav-sidebar">
+                                        <li><a href="#" class="small">1st</a></li>
+                                        <li><a href="#" class="small">2nd</a></li>
+                                        <li><a href="#" class="small">3rd</a></li>
+                                        <li><a href="#" class="small">4th</a></li>
                                     </ul>
                                 </div>
-                            </li>
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
-                </li>
 
-                <!--ComputerSystemEngg-->
-                <!--ComputerSystemEngg-->
-                <!--ComputerSystemEngg-->
-                <!--ComputerSystemEngg-->
-                <!--ComputerSystemEngg-->
-                <!--ComputerSystemEngg-->
+                    <li><a class="active" data-toggle="collapse" data-target="#collTwo" data-parent="#sideMenu"href="#">
+                        Chemical Engg.
+                        <span class="sr-only">(current)</span></a></li>
+                    <div id="collTwo" class="sublinks collapse">
+                        <div id="subColl2">
+                            <ul class=" panel nav nav-sidebar">
+                                <li><a data-toggle="collapse" data-target="#subCollThree" data-parent="#subColl2" href="#">Fall</a></li>
+                                <div id="subCollThree" class="sublinks collapse">
+                                    <ul class="nav nav-sidebar">
+                                        <li><a href="#" class="small">1st</a></li>
+                                        <li><a href="#" class="small">2nd</a></li>
+                                        <li><a href="#" class="small">3rd</a></li>
+                                        <li><a href="#" class="small">4th</a></li>
+                                    </ul>
+                                </div>
+                                <li><a data-toggle="collapse" data-target="#subCollFour" data-parent="#subColl2" href="#">Spring</a></li>
+                                <div id="subCollFour" class="sublinks collapse">
+                                    <ul class="nav nav-sidebar">
+                                        <li><a href="#" class="small">1st</a></li>
+                                        <li><a href="#" class="small">2nd</a></li>
+                                        <li><a href="#" class="small">3rd</a></li>
+                                        <li><a href="#" class="small">4th</a></li>
+                                    </ul>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
 
-                <li><a href="#">Electronics Engg.</a></li>
-                <li><a href="#">Energy & Environment Engg.</a></li>
-                <li><a href="#">Industrial & Management Engg.</a></li>
-                <li><a href="#">Metallurgy & Materials Engg.</a></li>
-                <li><a href="#">Petrolem & Gas Engg.</a></li>
-                <li><a href="#">Telecom Engg.</a></li>
-            </ul>
-        </div>
+                    <li><a class="active" data-toggle="collapse" data-target="#collThree" data-parent="#sideMenu"href="#">
+                        Computer System Engg.
+                        <span class="sr-only">(current)</span></a></li>
+                    <div id="collThree" class="sublinks collapse">
+                        <div id="subColl3">
+                            <ul class=" panel nav nav-sidebar">
+                                <li><a data-toggle="collapse" data-target="#subCollFive" data-parent="#subColl3" href="#">Fall</a></li>
+                                <div id="subCollFive" class="sublinks collapse">
+                                    <ul class="nav nav-sidebar">
+                                        <li><a href="#" class="small">1st</a></li>
+                                        <li><a href="#" class="small">2nd</a></li>
+                                        <li><a href="#" class="small">3rd</a></li>
+                                        <li><a href="#" class="small">4th</a></li>
+                                    </ul>
+                                </div>
+                                <li><a data-toggle="collapse" data-target="#subCollSix" data-parent="#subColl3" href="#">Spring</a></li>
+                                <div id="subCollSix" class="sublinks collapse">
+                                    <ul class="nav nav-sidebar">
+                                        <li><a href="#" class="small">1st</a></li>
+                                        <li><a href="#" class="small">2nd</a></li>
+                                        <li><a href="#" class="small">3rd</a></li>
+                                        <li><a href="#" class="small">4th</a></li>
+                                    </ul>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <li><a class="active" data-toggle="collapse" data-target="#collFour" data-parent="#sideMenu"href="#">
+                        Electronics Engg.
+                        <span class="sr-only">(current)</span></a></li>
+                    <div id="collFour" class="sublinks collapse">
+                        <div id="subColl4">
+                            <ul class=" panel nav nav-sidebar">
+                                <li><a data-toggle="collapse" data-target="#subCollSeven" data-parent="#subColl4" href="#">Fall</a></li>
+                                <div id="subCollSeven" class="sublinks collapse">
+                                    <ul class="nav nav-sidebar">
+                                        <li><a href="#" class="small">1st</a></li>
+                                        <li><a href="#" class="small">2nd</a></li>
+                                        <li><a href="#" class="small">3rd</a></li>
+                                        <li><a href="#" class="small">4th</a></li>
+                                    </ul>
+                                </div>
+                                <li><a data-toggle="collapse" data-target="#subCollEight" data-parent="#subColl4" href="#">Spring</a></li>
+                                <div id="subCollEight" class="sublinks collapse">
+                                    <ul class="nav nav-sidebar">
+                                        <li><a href="#" class="small">1st</a></li>
+                                        <li><a href="#" class="small">2nd</a></li>
+                                        <li><a href="#" class="small">3rd</a></li>
+                                        <li><a href="#" class="small">4th</a></li>
+                                    </ul>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <li><a class="active" data-toggle="collapse" data-target="#collFive" data-parent="#sideMenu"href="#">
+                        Energy & Environment Engg.
+                        <span class="sr-only">(current)</span></a></li>
+                    <div id="collFive" class="sublinks collapse">
+                        <div id="subColl5">
+                            <ul class=" panel nav nav-sidebar">
+                                <li><a data-toggle="collapse" data-target="#subCollNine" data-parent="#subColl5" href="#">Fall</a></li>
+                                <div id="subCollNine" class="sublinks collapse">
+                                    <ul class="nav nav-sidebar">
+                                        <li><a href="#" class="small">1st</a></li>
+                                        <li><a href="#" class="small">2nd</a></li>
+                                        <li><a href="#" class="small">3rd</a></li>
+                                        <li><a href="#" class="small">4th</a></li>
+                                    </ul>
+                                </div>
+                                <li><a data-toggle="collapse" data-target="#subCollTen" data-parent="#subColl5" href="#">Spring</a></li>
+                                <div id="subCollTen" class="sublinks collapse">
+                                    <ul class="nav nav-sidebar">
+                                        <li><a href="#" class="small">1st</a></li>
+                                        <li><a href="#" class="small">2nd</a></li>
+                                        <li><a href="#" class="small">3rd</a></li>
+                                        <li><a href="#" class="small">4th</a></li>
+                                    </ul>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <li><a class="active" data-toggle="collapse" data-target="#collSix" data-parent="#sideMenu"href="#">
+                        Industrial Engg. & Management
+                        <span class="sr-only">(current)</span></a></li>
+                    <div id="collSix" class="sublinks collapse">
+                        <div id="subColl6">
+                            <ul class=" panel nav nav-sidebar">
+                                <li><a data-toggle="collapse" data-target="#subCollEleven" data-parent="#subColl6" href="#">Fall</a></li>
+                                <div id="subCollEleven" class="sublinks collapse">
+                                    <ul class="nav nav-sidebar">
+                                        <li><a href="#" class="small">1st</a></li>
+                                        <li><a href="#" class="small">2nd</a></li>
+                                        <li><a href="#" class="small">3rd</a></li>
+                                        <li><a href="#" class="small">4th</a></li>
+                                    </ul>
+                                </div>
+                                <li><a data-toggle="collapse" data-target="#subCollTwelve" data-parent="#subColl6" href="#">Spring</a></li>
+                                <div id="subCollTwelve" class="sublinks collapse">
+                                    <ul class="nav nav-sidebar">
+                                        <li><a href="#" class="small">1st</a></li>
+                                        <li><a href="#" class="small">2nd</a></li>
+                                        <li><a href="#" class="small">3rd</a></li>
+                                        <li><a href="#" class="small">4th</a></li>
+                                    </ul>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <li><a class="active" data-toggle="collapse" data-target="#collSeven" data-parent="#sideMenu"href="#">
+                        Materials & Management Engg.
+                        <span class="sr-only">(current)</span></a></li>
+                    <div id="collSeven" class="sublinks collapse">
+                        <div id="subColl7">
+                            <ul class=" panel nav nav-sidebar">
+                                <li><a data-toggle="collapse" data-target="#subCollThirteen" data-parent="#subColl7" href="#">Fall</a></li>
+                                <div id="subCollThirteen" class="sublinks collapse">
+                                    <ul class="nav nav-sidebar">
+                                        <li><a href="#" class="small">1st</a></li>
+                                        <li><a href="#" class="small">2nd</a></li>
+                                        <li><a href="#" class="small">3rd</a></li>
+                                        <li><a href="#" class="small">4th</a></li>
+                                    </ul>
+                                </div>
+                                <li><a data-toggle="collapse" data-target="#subCollFourteen" data-parent="#subColl7" href="#">Spring</a></li>
+                                <div id="subCollFourteen" class="sublinks collapse">
+                                    <ul class="nav nav-sidebar">
+                                        <li><a href="#" class="small">1st</a></li>
+                                        <li><a href="#" class="small">2nd</a></li>
+                                        <li><a href="#" class="small">3rd</a></li>
+                                        <li><a href="#" class="small">4th</a></li>
+                                    </ul>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <li><a class="active" data-toggle="collapse" data-target="#collEight" data-parent="#sideMenu"href="#">
+                        Petroleum & Gas Engg.
+                        <span class="sr-only">(current)</span></a></li>
+                    <div id="collEight" class="sublinks collapse">
+                        <div id="subColl8">
+                            <ul class=" panel nav nav-sidebar">
+                                <li><a data-toggle="collapse" data-target="#subCollFifteen" data-parent="#subColl8" href="#">Fall</a></li>
+                                <div id="subCollFifteen" class="sublinks collapse">
+                                    <ul class="nav nav-sidebar">
+                                        <li><a href="#" class="small">1st</a></li>
+                                        <li><a href="#" class="small">2nd</a></li>
+                                        <li><a href="#" class="small">3rd</a></li>
+                                        <li><a href="#" class="small">4th</a></li>
+                                    </ul>
+                                </div>
+                                <li><a data-toggle="collapse" data-target="#subCollSixteen" data-parent="#subColl8" href="#">Spring</a></li>
+                                <div id="subCollSixteen" class="sublinks collapse">
+                                    <ul class="nav nav-sidebar">
+                                        <li><a href="#" class="small">1st</a></li>
+                                        <li><a href="#" class="small">2nd</a></li>
+                                        <li><a href="#" class="small">3rd</a></li>
+                                        <li><a href="#" class="small">4th</a></li>
+                                    </ul>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <li><a class="active" data-toggle="collapse" data-target="#collNine" data-parent="#sideMenu"href="#">
+                        Telecom Engg.
+                        <span class="sr-only">(current)</span></a></li>
+                    <div id="collNine" class="sublinks collapse">
+                        <div id="subColl9">
+                            <ul class=" panel nav nav-sidebar">
+                                <li><a data-toggle="collapse" data-target="#subCollSeventeen" data-parent="#subColl9" href="#">Fall</a></li>
+                                <div id="subCollSeventeen" class="sublinks collapse">
+                                    <ul class="nav nav-sidebar">
+                                        <li><a href="#" class="small">1st</a></li>
+                                        <li><a href="#" class="small">2nd</a></li>
+                                        <li><a href="#" class="small">3rd</a></li>
+                                        <li><a href="#" class="small">4th</a></li>
+                                    </ul>
+                                </div>
+                                <li><a data-toggle="collapse" data-target="#subCollEighteen" data-parent="#subColl9" href="#">Spring</a></li>
+                                <div id="subCollEighteen" class="sublinks collapse">
+                                    <ul class="nav nav-sidebar">
+                                        <li><a href="#" class="small">1st</a></li>
+                                        <li><a href="#" class="small">2nd</a></li>
+                                        <li><a href="#" class="small">3rd</a></li>
+                                        <li><a href="#" class="small">4th</a></li>
+                                    </ul>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+            </div>
+
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <div class="panel panel-default">
                 <!-- Default panel contents -->
@@ -170,6 +379,6 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="../js/jquery-2.2.0.js"></script>
-<script src="../js/bootstrap.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
