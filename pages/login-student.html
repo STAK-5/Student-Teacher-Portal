@@ -1,10 +1,51 @@
 <form class="form" role="form" id="studentLogin" name="studentLogin">
-    <div class="form-group">
-        <br>
-        <input type="email" class="form-control" id="emailField" placeholder="Email address" ng-model="studentLoginEmail">
-        <br>
-        <input type="password" class="form-control" id="passwordField" placeholder="Password" ng-model="studentLoginPassword" ng-minlength="8" ng-maxlength="32">
-        <br>
+    <br>
+    <div class="form-group has-feedback"
+         ng-class="{'has-error': studentLogin.loginStudentEmail.$touched && studentLogin.loginStudentEmail.$invalid, 'has-success': studentLogin.loginStudentEmail.$valid}"
+    >
+        <input type="email"
+               class="form-control"
+               id="emailField"
+               name="loginStudentEmail"
+               placeholder="Email address"
+               required
+               ng-model="studentLoginEmail"
+
+        >
+        <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': studentLogin.loginStudentEmail.$valid,
+                                                                    'glyphicon-remove': studentLogin.loginStudentEmail.$touched && studentLogin.loginStudentEmail.$invalid
+                                                                 }"
+               aria-hidden="true"></span>
+        <span class="help-block"
+              ng-show="studentLogin.loginStudentEmail.$dirty && studentLogin.loginStudentEmail.$invalid"
+        >
+            Please enter your email.
+        </span>
+    </div>
+    <div class="form-group has-feedback"
+         ng-class="{'has-error': studentLogin.studentLoginPassword.$touched && studentLogin.studentLoginPassword.$invalid, 'has-success': studentLogin.studentLoginPassword.$valid}"
+    >
+        <input type="password"
+               class="form-control"
+               id="passwordField"
+               name="studentLoginPassword"
+               placeholder="Password"
+               required
+               ng-model="studentLoginPassword"
+               ng-minlength="8"
+               ng-maxlength="32"
+        >
+        <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': studentLogin.studentLoginPassword.$valid,
+                                                                    'glyphicon-remove': studentLogin.studentLoginPassword.$touched && studentLogin.studentLoginPassword.$invalid
+                                                                 }"
+               aria-hidden="true"></span>
+        <span class="help-block"
+              ng-show="studentLogin.studentLoginPassword.$touched && studentLogin.studentLoginPassword.$invalid"
+        >
+            Please enter your password.
+        </span>
+     </div>
+
         <button type="button" class="btn btn-primary btn-md btn-block" ng-disabled="studentLogin.$invalid"><strong>Sign In</strong></button>
         <h4 class="text-center">Not a member?  <a href="#/signup-student">Join now.</a></h4>
         <h5 class="text-center"><a href="#/">Forgot Password?</a></h5>
