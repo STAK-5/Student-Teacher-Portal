@@ -1,11 +1,11 @@
-<form class="form">
+<form class="form" role="form" id="studentLogin" name="studentLogin">
     <div class="form-group">
         <br>
-        <input type="email" class="form-control" id="emailField" placeholder="Email address" ng-model="email">
+        <input type="email" class="form-control" id="emailField" placeholder="Email address" ng-model="studentLoginEmail">
         <br>
-        <input type="password" class="form-control" id="passwordField" placeholder="Password" ng-model="password">
+        <input type="password" class="form-control" id="passwordField" placeholder="Password" ng-model="studentLoginPassword" ng-minlength="8" ng-maxlength="32">
         <br>
-        <button type="button" class="btn btn-primary btn-md btn-block" ng-click="s_response()"><strong>Sign In</strong></button>
+        <button type="button" class="btn btn-primary btn-md btn-block" ng-disabled="studentLogin.$invalid"><strong>Sign In</strong></button>
         <h4 class="text-center">Not a member?  <a href="#/signup-student">Join now.</a></h4>
         <h5 class="text-center"><a href="#/">Forgot Password?</a></h5>
     </div>
