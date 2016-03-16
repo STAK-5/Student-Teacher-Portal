@@ -9,53 +9,19 @@
 	
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/loginStyle.css">
+		<link rel="stylesheet" type="text/css" href="css/dashboard-style.css">
 
 	</head>
 	<body ng-class="{'student-bg': tab === 1, 'teacher-bg': tab === 2}">
 
-	<header>
-		<nav class="navbar navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<a class="navbar-brand em-text navbar-left" href="#/" ng-click="tab = 1">Dawood University of Engineering and Technology</a>
-
-				</div>
-			</div>
-		</nav>
-	</header>
-
-	<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
-					<div class="jumbotron jumb">
-						<ul class="nav nav-tabs nav-justified" ng-init="tab = 1">
-							<li role="presentation" ng-class="{ active: tab === 1}"><a href="#/" ng-click="tab = 1">Student</a>
-							</li>
-							<li role="presentation" ng-class="{ active: tab === 2}"><a href="#/teacher-login" ng-click="tab = 2">Teacher</a>
-							</li>
-						</ul>
-						<div ng-view ng-cloak></div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	<footer>
-		<nav class="nav navbar-fixed-bottom navbar-right nav-color">
-			<div class="container">
-				<div class="navbar-header navbar-right">
-					<a class="navbar-brand em-text navbar-right" href="#/" ng-click="tab = 1"><span id = "fontColor">STAK Developers</span></a>
-
-				</div>
-			</div>
-		</nav>
-	</footer>
+	<div ng-view></div>
 
 
 	<!--Scripts-->
 
 		<script src="js/angular.js"></script>
 		<script src="js/angular-route.js"></script>
+		<script src="https://cdn.rawgit.com/angular-ui/ui-router/0.2.18/release/angular-ui-router.js"></script>
 		<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-aria.js"></script>-->
 
 		<script src="js/jquery-2.2.0.js"></script>
@@ -63,6 +29,9 @@
 		<script src="js/bootstrap.min.js"></script>
 
 		<script src="js/app.js"></script>
+		<script src="js/controllers.js"></script>
+		<script src="js/directives.js"></script>
+		<script src="js/routes.js"></script>
 
 	</body>
 </html>

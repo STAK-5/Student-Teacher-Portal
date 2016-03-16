@@ -1,19 +1,41 @@
-<form class="form" role="form" id=signUpForm"  name="signupForm" novalidate>
-<br>
-<div class="form-group has-feedback"
-     ng-class="{'has-error': signupForm.signupStudentName.$touched && signupForm.signupStudentName.$invalid, 'has-success': signupForm.signupStudentName.$valid}"
->
-    <input type="text"
-           class="form-control"
-           id="user-name"
-           name="signupStudentName"
-           placeholder="Username"
-           required
-           ng-model="signupName"
-           ng-minlength=3
-           ng-maxlength=50
-           ng-model-options="{ updateOn: 'blur' }"
-    >
+<header>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand em-text navbar-left" href="#/" ng-click="tab = 1">Dawood University of Engineering and Technology</a>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
+            <div class="jumbotron jumb">
+                <ul class="nav nav-tabs nav-justified" ng-init="tab = 1">
+                    <li role="presentation" ng-class="{ active: tab === 1}"><a href="#/" ng-click="tab = 1">Student</a>
+                    </li>
+                    <li role="presentation" ng-class="{ active: tab === 2}"><a href="#/teacher-login" ng-click="tab = 2">Teacher</a>
+                    </li>
+                </ul>
+                <div>
+                    <form class="form" role="form" id=signUpForm"  name="signupForm" novalidate>
+                        <br>
+                        <div class="form-group has-feedback"
+                             ng-class="{'has-error': signupForm.signupStudentName.$touched && signupForm.signupStudentName.$invalid, 'has-success': signupForm.signupStudentName.$valid}"
+                        >
+                            <input type="text"
+                                   class="form-control"
+                                   id="user-name"
+                                   name="signupStudentName"
+                                   placeholder="Username"
+                                   required
+                                   ng-model="signupName"
+                                   ng-minlength=3
+                                   ng-maxlength=50
+                                   ng-model-options="{ updateOn: 'blur' }"
+                            >
     <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': signupForm.signupStudentName.$valid,
                                                                 'glyphicon-remove': signupForm.signupStudentName.$touched && signupForm.signupStudentName.$invalid
                                                              }"
@@ -23,21 +45,21 @@
     >
         Please enter your complete name.
     </span>
-</div>
-<div class="form-group has-feedback"
-     ng-class="{'has-error': signupForm.rollNo.$touched && signupForm.rollNo.$invalid, 'has-success': signupForm.rollNo.$valid}"
->
-    <input type="text"
-           class="form-control"
-           id="roll-no"
-           name="rollNo"
-           placeholder="Roll No. (eg. D-14-CS-00 or D-14-CS-000)"
-           required
-           ng-model="officialRollNo"
-           ng-class="{ 'has-error' : signupForm.$dirty && signupForm.rollNo.$invalid }"
-           ng-pattern="/^[D]{1}-[0-9]{2}-[A-Z]{2}-[0-9]{2,3}$/"
-           ng-model-options="{ updateOn: 'blur' }"
-    >
+                        </div>
+                        <div class="form-group has-feedback"
+                             ng-class="{'has-error': signupForm.rollNo.$touched && signupForm.rollNo.$invalid, 'has-success': signupForm.rollNo.$valid}"
+                        >
+                            <input type="text"
+                                   class="form-control"
+                                   id="roll-no"
+                                   name="rollNo"
+                                   placeholder="Roll No. (eg. D-14-CS-00 or D-14-CS-000)"
+                                   required
+                                   ng-model="officialRollNo"
+                                   ng-class="{ 'has-error' : signupForm.$dirty && signupForm.rollNo.$invalid }"
+                                   ng-pattern="/^[D]{1}-[0-9]{2}-[A-Z]{2}-[0-9]{2,3}$/"
+                                   ng-model-options="{ updateOn: 'blur' }"
+                            >
     <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': signupForm.rollNo.$valid,
                                                                 'glyphicon-remove': signupForm.rollNo.$touched && signupForm.rollNo.$invalid
                                                              }"
@@ -47,21 +69,21 @@
     >
         Please enter Roll No. in correct format. (eg. D-14-CS-00 or D-14-CS-000)
     </span>
-</div>
-<div class="form-group has-feedback"
-     ng-class="{'has-error': signupForm.signupStudentEmail.$touched && signupForm.signupStudentEmail.$invalid, 'has-success': signupForm.signupStudentEmail.$valid}"
->
-    <input type="email"
-           class="form-control"
-           id="emailField"
-           name="signupStudentEmail"
-           placeholder="Email address"
-           required
-           ng-model="signupEmail"
-           ng-model-options="{ updateOn: 'blur' }"
-    >
+                        </div>
+                        <div class="form-group has-feedback"
+                             ng-class="{'has-error': signupForm.signupStudentEmail.$touched && signupForm.signupStudentEmail.$invalid, 'has-success': signupForm.signupStudentEmail.$valid}"
+                        >
+                            <input type="email"
+                                   class="form-control"
+                                   id="emailField"
+                                   name="signupStudentEmail"
+                                   placeholder="Email address"
+                                   required
+                                   ng-model="signupEmail"
+                                   ng-model-options="{ updateOn: 'blur' }"
+                            >
     <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': signupForm.signupStudentEmail.$valid,
-                                                                'glyphicon-remove': signupForm.signupStudentEmail.$touched && signupForm.signupStudentName.$invalid
+                                                                'glyphicon-remove': signupForm.signupStudentEmail.$touched && signupForm.signupStudentEmail.$invalid
                                                              }"
            aria-hidden="true"></span>
     <span class="help-block"
@@ -69,58 +91,75 @@
     >
         Enter correct email address.
     </span>
-</div>
-<div class="form-group has-feedback"
-     ng-class="{'has-error': signupForm.signupStudentPassword.$touched && signupForm.signupStudentPassword.$invalid, 'has-success': signupForm.signupStudentPassword.$valid}"
->
-    <input type="password"
-           class="form-control"
-           name="signupStudentPassword"
-           id="passwordField"
-           placeholder="Password"
-           required
-           ng-model="signupStudentPassword"
-           ng-minlength="8"
-           ng-maxlength="32"
-    >
-    <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': signupForm.signupStudentPassword.$valid,
-                                                                'glyphicon-remove': signupForm.signupStudentPassword.$touched && signupForm.signupStudentPassword.$invalid
+                        </div>
+                        <div class="form-group has-feedback"
+                             ng-class="{'has-error': signupForm.signupPassword.$touched && signupForm.signupPassword.$invalid, 'has-success': signupForm.signupPassword.$valid}"
+                        >
+                            <input type="password"
+                                   class="form-control"
+                                   name="signupPassword"
+                                   id="passwordField"
+                                   placeholder="Password"
+                                   required
+                                   ng-model="signupPassword"
+                                   ng-minlength="8"
+                                   ng-maxlength="32"
+                            >
+    <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': signupForm.signupPassword.$valid,
+                                                                'glyphicon-remove': signupForm.signupPassword.$touched && signupForm.signupPassword.$invalid
                                                              }"
            aria-hidden="true"></span>
     <span class="help-block"
-          ng-show="signupForm.signupStudentPassword.$dirty && signupForm.signupStudentPassword.$invalid"
+          ng-show="signupForm.signupPassword.$dirty && signupForm.signupPassword.$invalid"
     >
         Pasword must be 8-32 characters long.
     </span>
-</div>
+                        </div>
 
-<div class="form-group has-feedback"
-     ng-class="{'has-error': signupForm.signupStudentPasswordCheck.$touched && signupForm.signupStudentPasswordCheck.$invalid, 'has-success': signupForm.signupStudentPasswordCheck.$valid}"
->
-    <input type="password"
-           class="form-control"
-           name="signupStudentPasswordCheck"
-           id="passwordFieldCheck"
-           placeholder="Type your password again"
-           required
-           password-confirm
-           match-target="signupStudentPassword"
-           ng-model="signupStudentPasswordCheck"
-           ng-minlength="8"
-           ng-maxlength="32"
-    >
-<span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': signupForm.signupStudentPasswordCheck.$valid,
-                                                            'glyphicon-remove': signupForm.signupStudentPasswordCheck.$touched && signupForm.signupStudentPasswordCheck.$invalid
+                        <div class="form-group has-feedback"
+                             ng-class="{'has-error': signupForm.signupPasswordCheck.$touched && signupForm.signupPasswordCheck.$invalid, 'has-success': signupForm.signupPasswordCheck.$valid}"
+                        >
+                            <input type="password"
+                                   class="form-control"
+                                   name="signupPasswordCheck"
+                                   id="passwordFieldCheck"
+                                   placeholder="Type your password again"
+                                   required
+                                   password-confirm
+                                   match-target="signupPassword"
+                                   ng-model="signupPasswordCheck"
+                                   ng-minlength="8"
+                                   ng-maxlength="32"
+                            >
+<span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': signupForm.signupPasswordCheck.$valid,
+                                                            'glyphicon-remove': signupForm.signupPasswordCheck.$touched && signupForm.signupPasswordCheck.$invalid
                                                          }"
        aria-hidden="true"></span>
 <span class="help-block"
-      ng-show="signupForm.signupStudentPasswordCheck.$dirty && signupForm.signupStudentPasswordCheck.$invalid"
+      ng-show="signupForm.signupPasswordCheck.$dirty && signupForm.signupPasswordCheck.$invalid"
 >
     Pasword must be 8-32 characters long.
 </span>
+                        </div>
+                        <a href="#/dashboard-student"><button type="button" class="btn btn-primary btn-md btn-block" ng-disabled="signupForm.$invalid"><strong>Sign up</strong></button></a>
+                        <br>
+                        <h4 class="text-center"><a href="#/">Already a member?</a></h4>
+                </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
 </div>
-    <button type="button" class="btn btn-primary btn-md btn-block" ng-disabled="signupForm.$invalid"><strong>Sign up</strong></button>
-    <br>
-    <h4 class="text-center"><a href="#/">Already a member?</a></h4>
 </div>
-</form>
+
+<footer>
+    <nav class="nav navbar-fixed-bottom navbar-right nav-color">
+        <div class="container">
+            <div class="navbar-header navbar-right">
+                <a class="navbar-brand em-text navbar-right" href="#/" ng-click="tab = 1"><span id = "fontColor">STAK Developers</span></a>
+
+            </div>
+        </div>
+    </nav>
+</footer>
