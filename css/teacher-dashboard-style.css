@@ -51,7 +51,7 @@ body {
 
 .nav-sidebar li a.active{
     color: #428bca;
-    background-color:;
+    background-color: #f8f8f8;
 }
 /* stylesheet for sidebar ends */
 
