@@ -37,7 +37,10 @@ myApp.controller('confirmationController', ['$scope', function($scope){
 
 }]);
 
-myApp.controller('dashboardController', ['$scope', function($scope){
+myApp.controller('studentDashboardController', ['$scope', function($scope){
 
 }]);
 
+myApp.controller('teacherDashboardController', ['$scope', function($scope){
+
+}]);

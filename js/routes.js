@@ -61,10 +61,15 @@ myApp.config(function($routeProvider){
 
         .when('/dashboard-student', {
             templateUrl: 'pages/dashboard-student.html',
-            controller: 'dashboardController'
+            controller: 'StudentDashboardController'
+        })
+
+        .when('/dashboard-teacher', {
+            templateUrl: 'pages/dashboard-teacher.html',
+            controller: 'teacherDashboardController'
         })
 
         .otherwise({
-            templateUrl: 'pages/student.html'
+            templateUrl: 'pages/login-student.html'
         })
 });

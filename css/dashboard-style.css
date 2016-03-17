@@ -62,8 +62,7 @@ body {
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
-    color: #fff;
-    background-color: #428bca;
+    color: #428bca;
 }
 
 
@@ -124,10 +123,15 @@ body {
 
 
 .small{
-    background-color: #e1e1e1;
+    background-color: #e1e1e1!important;
 }
 
 .small:hover, .small:active{
-    background-color: #5e5e5e;
+    background-color: #5e5e5e!important;
 }
 
+
+li{
+    cursor: pointer;
+
+}

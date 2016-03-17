@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
+    <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -29,16 +29,16 @@
 
             <div id="sideMenu">
                 <ul class="panel nav nav-sidebar">
-                    <li><a class="active" data-toggle="collapse" data-target="#APMenu" data-parent="#sideMenu">
+                    <li><a class="active" data-toggle="collapse" data-target="#APMenu" data-parent="#sideMenu" >
                         Architecture and Planning
                         <span class="sr-only">(current)</span></a></li>
                     <div id="APMenu" class="sublinks collapse">
                         <div id=APcollapse>
                             <ul class="panel nav nav-sidebar">
-                                <li><a data-toggle="collapse" data-target="#APFall" data-parent=#APcollapse  >Fall</a></li>
+                                <li><a data-toggle="collapse" data-target="#APFall" data-parent=#APcollapse >Fall</a></li>
                                 <div id="APFall" class="sublinks collapse">
                                     <ul class="nav nav-sidebar">
-                                        <li><a href="" class="small">1<sup>st</sup></a></li>
+                                        <li><a  class="small">1<sup>st</sup></a></li>
                                         <li><a  class="small">2<sup>nd</sup></a></li>
                                         <li><a  class="small">3<sup>rd</sup></a></li>
                                         <li><a  class="small">4<sup>th</sup></a></li>
@@ -283,79 +283,122 @@
                 </ul>
             </div>
 
-            </div>
+        </div>
 
-        <div class="col-sm-9 col-md-offset-2 col-md-10 main">
-            <div class="panel panel-default">
-                <!-- Default panel contents -->
-                <div class="panel-heading">Important Uploads</div>
-                <div class="table-responsive table-stripped">
-                <!-- Table -->
-                <table class="table table-hover">
-                    <tbody>
-                        <tr>
-                            <th>File Type</th>
-                            <th>Title</th>
-                            <th>Important Note</th>
-                            <th>File Size</th>
-                            <th>Uploaded By</th>
-                            <th>Download</th>
-                        </tr>
-                        <tr>
-                            <td>{{ File.name }}</td><td>{{ File.title }}</td><td>{{ File.important }}</td><td>{{ File.size }}</td><td>{{ File.uploader }}</td><td><input type="button" value="Download" class="btn btn-primary"></td>
-                        </tr>
-                        <tr>
-                            <td>{{ File.name }}</td><td>{{ File.title }}</td><td>{{ File.important }}</td><td>{{ File.size }}</td><td>{{ File.uploader }}</td><td><input type="button" value="Download" class="btn btn-primary"></td>
-                        </tr>
-                        <tr>
-                            <td>{{ File.name }}</td><td>{{ File.title }}</td><td>{{ File.important }}</td><td>{{ File.size }}</td><td>{{ File.uploader }}</td><td><input type="button" value="Download" class="btn btn-primary"></td>
-                        </tr>
-                        <tr>
-                            <td>{{ File.name }}</td><td>{{ File.title }}</td><td>{{ File.important }}</td><td>{{ File.size }}</td><td>{{ File.uploader }}</td><td><input type="button" value="Download" class="btn btn-primary"></td>
-                        </tr>
-                        <tr>
-                            <td>{{ File.name }}</td><td>{{ File.title }}</td><td>{{ File.important }}</td><td>{{ File.size }}</td><td>{{ File.uploader }}</td><td><input type="button" value="Download" class="btn btn-primary"></td>
-                        </tr>
-                        <tr>
-                            <td>{{ File.name }}</td><td>{{ File.title }}</td><td>{{ File.important }}</td><td>{{ File.size }}</td><td>{{ File.uploader }}</td><td><input type="button" value="Download" class="btn btn-primary"></td>
-                        </tr>
-                        <tr>
-                            <td>{{ File.name }}</td><td>{{ File.title }}</td><td>{{ File.important }}</td><td>{{ File.size }}</td><td>{{ File.uploader }}</td><td><input type="button" value="Download" class="btn btn-primary"></td>
-                        </tr>
+        <div class="col-md-offset-2 col-md-10 col-sm-8 col-xs-7">
 
-                    </tbody>
-                </table>
+            <p><h3>Hi,</h3> {{teacherAct.gender}} {{taecherAct.Name}} Hope you are having a nice day.</p>
+
+            <div class="col-md-6 col-sm-6 col-xs-6">
+
+                <div class="dropdown">
+                    <div class="panel panel-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopus="true" aria-expanded="false">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                Department
+                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </h4>
+                        </div>
+                    </div>
+                    <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Computer System</a></li>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Chemical</a></li>
+                        <li><a href="#">Petroleum & Gas</a></li>
+                        <li><a href="#">Industrial & Management</a></li>
+                        <li><a href="#">Telecommunication</a></li>
+                        <li><a href="#">Energy & Environment</a></li>
+                        <li><a href="#">Metallurgy & Material</a></li>
+                        <li><a href="#">Art & Architecture</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <div class="panel panel-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopus="true" aria-expanded="false">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                Batch
+                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </h4>
+                        </div>
+                    </div>
+                    <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">13</a></li>
+                        <li><a href="#">14</a></li>
+                        <li><a href="#">15</a></li>
+                        <li><a href="#">16</a></li>
+                    </ul>
                 </div>
             </div>
-            <nav class="float-right">
-                <ul class="pagination">
-                    <li>
-                        <a  aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li><a >1</a></li>
-                    <li><a >2</a></li>
-                    <li><a >3</a></li>
-                    <li><a >4</a></li>
-                    <li><a >5</a></li>
-                    <li>
-                        <a  aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
+
+            <div class="col-md-6 col-sm-6 col-xs-6">
+
+                <div class="dropdown">
+                    <div class="panel panel-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopus="true" aria-expanded="false">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                Subject
+                                <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                            </h4>
+                        </div>
+                    </div>
+                    <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Web Engineering</a></li>
+                        <li><a href="#">Software Engineering</a></li>
+                        <li><a href="#">Database Management System</a></li>
+                        <li><a href="#">Microprocessor Based Sysyem Design</a></li>
+                        <li><a href="#">Numerical Methods</a></li>
+                    </ul>
+                </div>
+
+                <div class="panel panel-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopus="true" aria-expanded="false">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            Semester
+                            <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+                        </h4>
+                    </div>
+                </div>
+                <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">1st</a></li>
+                    <li><a href="#">2nd</a></li>
+                    <li><a href="#">3rd</a></li>
+                    <li><a href="#">4th</a></li>
+                    <li><a href="#">5th</a></li>
+                    <li><a href="#">6th</a></li>
+                    <li><a href="#">7th</a></li>
+                    <li><a href="#">8th</a></li>
                 </ul>
-            </nav>
             </div>
+
+            <form class="form">
+                <div class="form-group has-default">
+                    <input type="file" class="form-control" id="fileField" placeholder="Upload File Section">
+                    <br>
+
+                    <textarea class="form-control" id="descriptionField" placeholder="Any important note"></textarea>
+                    <br>
+
+                    <textarea class="form-control" id="descriptionField" placeholder="Title of the file"></textarea>
+                    <br>
+                </div>
+                <button type="button" class="btn btn-primary btn-lg">UPLOAD</button>
+            </form>
         </div>
     </div>
+
+</div>
 </div>
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="../js/jquery-2.2.0.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-</body>
-</html>
+<footer>
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+
+            <div class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Credit STAK</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav>
+</footer>
