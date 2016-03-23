@@ -43,6 +43,7 @@
 myApp.config(function($routeProvider){
     $routeProvider
 
+
         .when('/', {
             templateUrl: 'pages/login-student.html',
             controller: 'studentLoginController'
@@ -69,7 +70,4 @@ myApp.config(function($routeProvider){
             controller: 'teacherDashboardController'
         })
 
-        .otherwise({
-            templateUrl: 'pages/login-student.html'
-        })
 });

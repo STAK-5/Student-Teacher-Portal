@@ -9,26 +9,17 @@ myApp.controller('mainController', ['$scope', function($scope){
 myApp.controller('teacherLoginController', ['$scope' ,'$log', function($scope, $log){
     $scope.teacherEmail = '';
     $scope.teacherPassword = '';
+
 }]);
 
-myApp.controller('studentLoginController', ['$scope' ,'$log','$http' ,function($scope, $log, $http){
+myApp.controller('studentLoginController', ['$scope' ,'$log','$http', 'tabParser' ,function($scope, $log, $http, tabParser){
 
     $scope.studentLoginEmail = '';
     $scope.studentLoginPassword = '';
-    /*
-     $scope.s_response = function(){
-     console.log($scope.password, $scope.email);
-     $http.post('/api/login', {email: $scope.email, pwd: $scope.password})
-     .success(function(res){
-     console.log(res);
-     }).error(function(data, status){
-     console.log('error =>',data);
-     console.log()
-     });
-     }*/
+
 }]);
 
-myApp.controller('confirmationController', ['$scope', function($scope){
+myApp.controller('confirmationController', ['$scope', 'tabParser',function($scope, tabParser){
     $scope.officialRollNo = '';
     $scope.signupName = '';
     $scope.signupEmail = '';
@@ -44,3 +35,9 @@ myApp.controller('studentDashboardController', ['$scope', function($scope){
 myApp.controller('teacherDashboardController', ['$scope', function($scope){
 
 }]);
+
+
+
+myApp.service('tabParser' , function(){
+
+});
