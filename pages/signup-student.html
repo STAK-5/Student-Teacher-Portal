@@ -1,30 +1,31 @@
+<header>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand em-text navbar-left" href="#/" ng-click="tab = 1">Dawood University of Engineering and Technology</a>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
+            <div class="jumbotron jumb">
+                <ul class="nav nav-tabs nav-justified">
+                    <li role="presentation" ng-class="{ active: value === 1 || value === 3}"><a href="#/" ng-click="value = 1">Student </a>
+                    </li>
+                    <li role="presentation" ng-class="{ active: value === 2}"><a href="#/teacher-login" ng-click="value = 2">Teacher {{ value }}</a>
+                    </li>
+
+
                 <div>
                     <form class="form" role="form" id=signUpForm"  name="signupForm" novalidate>
                         <br>
                         <div class="form-group has-feedback"
-                             ng-class="{'has-error': signupForm.signupStudentName.$touched && signupForm.signupStudentName.$invalid, 'has-success': signupForm.signupStudentName.$valid}"
+                             ng-class="{'has-error': signupForm.rollNo.$touched && signupForm.signupStudentName.$invalid, 'has-success': signupForm.signupStudentName.$valid}"
                         >
-                            <input type="text"
-                                   class="form-control"
-                                   id="user-name"
-                                   name="signupStudentName"
-                                   placeholder="Username"
-                                   required
-                                   ng-model="signupName"
-                                   ng-minlength=3
-                                   ng-maxlength=50
-                                   ng-model-options="{ updateOn: 'blur' }"
-                            >
-    <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': signupForm.signupStudentName.$valid,
-                                                                'glyphicon-remove': signupForm.signupStudentName.$touched && signupForm.signupStudentName.$invalid
-                                                             }"
-           aria-hidden="true"></span>
-    <span class="help-block"
-          ng-show="signupForm.signupStudentName.$dirty && signupForm.signupStudentName.$invalid"
-    >
-        Please enter your complete name.
-    </span>
-                        </div>
+
                         <div class="form-group has-feedback"
                              ng-class="{'has-error': signupForm.rollNo.$touched && signupForm.rollNo.$invalid, 'has-success': signupForm.rollNo.$valid}"
                         >
@@ -82,7 +83,7 @@
                                    required
                                    ng-model="signupPassword"
                                    ng-minlength="8"
-                                   ng-maxlength="32"
+                                   ng-maxlength="16"
                             >
     <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': signupForm.signupPassword.$valid,
                                                                 'glyphicon-remove': signupForm.signupPassword.$touched && signupForm.signupPassword.$invalid
@@ -91,7 +92,7 @@
     <span class="help-block"
           ng-show="signupForm.signupPassword.$dirty && signupForm.signupPassword.$invalid"
     >
-        Pasword must be 8-32 characters long.
+        Pasword must be 8-16 characters long.
     </span>
                         </div>
 
@@ -108,7 +109,7 @@
                                    match-target="signupPassword"
                                    ng-model="signupPasswordCheck"
                                    ng-minlength="8"
-                                   ng-maxlength="32"
+                                   ng-maxlength="16"
                             >
 <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': signupForm.signupPasswordCheck.$valid,
                                                             'glyphicon-remove': signupForm.signupPasswordCheck.$touched && signupForm.signupPasswordCheck.$invalid
@@ -117,7 +118,7 @@
 <span class="help-block"
       ng-show="signupForm.signupPasswordCheck.$dirty && signupForm.signupPasswordCheck.$invalid"
 >
-    Pasword must be 8-32 characters long.
+    Pasword must be 8-16 characters long.
 </span>
                         </div>
                         <a href="#/dashboard-student"><button type="button" class="btn btn-primary btn-md btn-block" ng-disabled="signupForm.$invalid"><strong>Sign up</strong></button></a>
@@ -131,3 +132,15 @@
     </div>
 </div>
 </div>
+
+
+<footer>
+    <nav class="nav navbar-fixed-bottom navbar-right nav-color">
+        <div class="container">
+            <div class="navbar-header navbar-right">
+                <a class="navbar-brand em-text navbar-right" href="#/" ng-click="tab = 1"><span id = "fontColor">STAK Developers</span></a>
+
+            </div>
+        </div>
+    </nav>
+</footer>

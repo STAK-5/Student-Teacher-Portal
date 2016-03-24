@@ -1,0 +1,36 @@
+<header>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand em-text navbar-left" href="#/" ng-click="tab = 1">Dawood University of Engineering and Technology</a>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
+            <div class="jumbotron jumb">
+                <ul class="nav nav-tabs nav-justified" ">
+                    <li role="presentation" ng-class="{ active: value === 1 || value === 3}"><a href="#/" ng-click="value = 1">Student </a>
+                    </li>
+                    <li role="presentation" ng-class="{ active: value === 2}"><a href="#/teacher-login" ng-click="value = 2">Teacher {{ value }}</a>
+                    </li>
+                </ul>
+                <ng-view></ng-view>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <nav class="nav navbar-fixed-bottom navbar-right nav-color">
+        <div class="container">
+            <div class="navbar-header navbar-right">
+                <a class="navbar-brand em-text navbar-right" href="#/" ng-click="tab = 1"><span id = "fontColor">STAK Developers</span></a>
+
+            </div>
+        </div>
+    </nav>
+</footer>
