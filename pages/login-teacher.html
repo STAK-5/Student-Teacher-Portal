@@ -15,7 +15,7 @@
                 <ul class="nav nav-tabs nav-justified">
                     <li role="presentation" ng-class="{ active: value === 1 || value === 3}"><a href="#/" ng-click="value = 1">Student </a>
                     </li>
-                    <li role="presentation" ng-class="{ active: value === 2}"><a href="#/teacher-login" ng-click="value = 2">Teacher {{ value }}</a>
+                    <li role="presentation" ng-class="{ active: value === 2}"><a href="#/teacher-login" ng-click="value = 2">Teacher </a>
                     </li>
                 </ul>
 
@@ -34,7 +34,7 @@
                                        ng-model="teacherEmail"
                                        ng-model-options="{ updateOn: 'blur' }"
                                 >
-    <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': teacherForm.teacherEmail.$valid,
+    <span  class="glyphicon form-control-feedback glyphicon-user" ng-class="{ 'glyphicon-ok': teacherForm.teacherEmail.$valid,
                                                                 'glyphicon-remove': teacherForm.teacherEmail.$touched && teacherForm.teacherEmail.$invalid
                                                              }"
            aria-hidden="true"></span>
@@ -57,12 +57,13 @@
                                        ng-minlength="8"
                                        ng-maxlength="16"
                                 >
-        <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': teacherForm.teacherPassword.$valid,
-                                                                'glyphicon-remove': teacherForm.teacherPassword.$touched && teacherForm.teacherPassword.$invalid
+        <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': teacherForm.teacherPassword.$valid
                                                              }"
                aria-hidden="true"></span>
+        <span  class="glyphicon form-control-feedback glyphicon-lock"  ng-hide="teacherForm.teacherPassword.$valid"
+               aria-hidden="true"></span>
     <span class="help-block"
-          ng-show="teacherForm.teacherPassword.$dirty && teacherForm.teacherPassword.$invalid"
+          ng-show="teacherForm.teacherPassword.$touched && teacherForm.teacherPassword.$invalid"
     >
         Please enter your password.
     </span>

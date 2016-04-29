@@ -289,22 +289,53 @@
             <div class="panel panel-default">
                 <!-- Default panel contents -->
                 <div class="panel-heading">Important Uploads</div>
-                <div class="table-responsive table-stripped">
+                <div class="table-responsive table-stripped pre-scrollable">
                 <!-- Table -->
-                <table class="table table-hover">
-                    <tbody>
-                        <tr>
-                            <th>File Type</th>
-                            <th>Title</th>
-                            <th>Important Note</th>
-                            <th>File Size</th>
-                            <th>Uploaded By</th>
-                            <th>Download</th>
-                        </tr>
-                        <tr ng-repeat="files in File">
+                <table class="table table-hover pre-scrollable">
+                    <thead>
+                    <tr>
+                        <th>File Type</th>
+                        <th>Title</th>
+                        <th>Important Note</th>
+                        <th>File Size</th>
+                        <th>Uploaded By</th>
+                        <th>Download</th>
+                    </tr>
+                    </thead>
+                    <tbody class="pre-scrollable">
+                        <!--<tr >
                             <td>{{ File.name }}</td><td>{{ File.title }}</td><td>{{ File.important }}</td><td>{{ File.size }}</td><td>{{ File.uploader }}</td><td><input type="button" value="Download" class="btn btn-primary"></td>
+                        </tr>-->
+                        <tr >
+                            <td>File.name </td><td> File.title </td><td> File.important </td><td> File.size </td><td> File.uploader </td><td><input type="button" value="Download" class="btn btn-primary"></td>
                         </tr>
-
+                        <tr >
+                            <td>File.name </td><td> File.title </td><td> File.important </td><td> File.size </td><td> File.uploader </td><td><input type="button" value="Download" class="btn btn-primary"></td>
+                        </tr>
+                        <tr >
+                            <td>File.name </td><td> File.title </td><td> File.important </td><td> File.size </td><td> File.uploader </td><td><input type="button" value="Download" class="btn btn-primary"></td>
+                        </tr>
+                        <tr >
+                            <td>File.name </td><td> File.title </td><td> File.important </td><td> File.size </td><td> File.uploader </td><td><input type="button" value="Download" class="btn btn-primary"></td>
+                        </tr>
+                        <tr >
+                            <td>File.name </td><td> File.title </td><td> File.important </td><td> File.size </td><td> File.uploader </td><td><input type="button" value="Download" class="btn btn-primary"></td>
+                        </tr>
+                        <tr >
+                            <td>File.name </td><td> File.title </td><td> File.important </td><td> File.size </td><td> File.uploader </td><td><input type="button" value="Download" class="btn btn-primary"></td>
+                        </tr>
+                        <tr >
+                            <td>File.name </td><td> File.title </td><td> File.important </td><td> File.size </td><td> File.uploader </td><td><input type="button" value="Download" class="btn btn-primary"></td>
+                        </tr>
+                        <tr >
+                            <td>File.name </td><td> File.title </td><td> File.important </td><td> File.size </td><td> File.uploader </td><td><input type="button" value="Download" class="btn btn-primary"></td>
+                        </tr>
+                        <tr >
+                            <td>File.name </td><td> File.title </td><td> File.important </td><td> File.size </td><td> File.uploader </td><td><input type="button" value="Download" class="btn btn-primary"></td>
+                        </tr>
+                        <tr >
+                            <td>File.name </td><td> File.title </td><td> File.important </td><td> File.size </td><td> File.uploader </td><td><input type="button" value="Download" class="btn btn-primary"></td>
+                        </tr>
                     </tbody>
                 </table>
                 </div>

@@ -15,11 +15,9 @@
                 <ul class="nav nav-tabs nav-justified">
                 <li role="presentation" ng-class="{ active: value === 1 || value === 3}"><a href="#/" ng-click="value = 1">Student </a>
                 </li>
-                <li role="presentation" ng-class="{ active: value === 2}"><a href="#/teacher-login" ng-click="value = 2">Teacher {{ value }}</a>
+                <li role="presentation" ng-class="{ active: value === 2}"><a href="#/teacher-login" ng-click="value = 2">Teacher </a>
                 </li>
                 </ul>
-
-
                 <div>
                     <form class="form" role="form" id="studentLogin" name="studentLogin">
                         <br>
@@ -34,14 +32,13 @@
                                    required
                                    ng-pattern="/^[D]{1}-[0-9]{2}-[A-Z]{2}-[0-9]{2,3}$/"
                                    ng-model="studentRollNo"
-
                             >
-<span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': studentLogin.loginRollNo.$valid,
+<span  class="glyphicon form-control-feedback glyphicon-user" ng-class="{ 'glyphicon-ok': studentLogin.loginRollNo.$valid,
                                                     'glyphicon-remove': studentLogin.loginRollNo.$touched && studentLogin.loginRollNo.$invalid
                                                  }"
        aria-hidden="true"></span>
 <span class="help-block"
-      ng-show="studentLogin.loginRollNo.$dirty && studentLogin.loginRollNo.$invalid"
+      ng-show="studentLogin.loginRollNo.$dirty && studentLogin.loginRollNo.$touched && studentLogin.loginRollNo.$invalid"
 >
 Please enter Roll No. in correct format. (eg. D-14-CS-00 or D-14-CS-000)
 </span>
@@ -60,9 +57,10 @@ Please enter Roll No. in correct format. (eg. D-14-CS-00 or D-14-CS-000)
                                    ng-maxlength=""
                             >
 <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': studentLogin.studentLoginPassword.$valid,
-                                                    'glyphicon-remove': studentLogin.studentLoginPassword.$touched && studentLogin.studentLoginPassword.$invalid
-                                                 }"
+                                                    }"
        aria-hidden="true"></span>
+<span  class="glyphicon form-control-feedback glyphicon-lock" ng-hide="studentLogin.studentLoginPassword.$valid"
+           aria-hidden="true"></span>
 <span class="help-block"
       ng-show="studentLogin.studentLoginPassword.$touched && studentLogin.studentLoginPassword.$invalid"
 >

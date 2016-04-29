@@ -39,3 +39,15 @@
 	background-size: cover;
 }
 
+.xlarge {
+	position: absolute;
+	bottom: 50px;
+	font-family: 'Oswald', serif;
+	font-size: 248px;
+	color: #FFF; /* Fallback for older browsers */
+	color: rgba(255, 255, 255, 0.3);
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+
+}

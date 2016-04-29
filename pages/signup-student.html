@@ -15,12 +15,12 @@
                 <ul class="nav nav-tabs nav-justified">
                     <li role="presentation" ng-class="{ active: value === 1 || value === 3}"><a href="#/" ng-click="value = 1">Student </a>
                     </li>
-                    <li role="presentation" ng-class="{ active: value === 2}"><a href="#/teacher-login" ng-click="value = 2">Teacher {{ value }}</a>
+                    <li role="presentation" ng-class="{ active: value === 2}"><a href="#/teacher-login" ng-click="value = 2">Teacher </a>
                     </li>
 
-
+                </ul>
                 <div>
-                    <form class="form" role="form" id=signUpForm"  name="signupForm" novalidate>
+                    <form class="form" role="form" id="signUpForm"  name="signupForm" novalidate>
                         <br>
                         <div class="form-group has-feedback"
                              ng-class="{'has-error': signupForm.signupStudentName.$touched && signupForm.signupStudentName.$invalid, 'has-success': signupForm.signupStudentName.$valid}"
@@ -88,7 +88,7 @@
                                                              }"
            aria-hidden="true"></span>
     <span class="help-block"
-          ng-show="signupForm.signupStudentEmail.$dirty && signupForm.signupStudentEmail.$invalid"}
+           ng-show="signupForm.signupStudentEmail.$dirty && signupForm.signupStudentEmail.$invalid"
     >
         Enter correct email address.
     </span>
@@ -104,7 +104,7 @@
                                    required
                                    ng-model="signupPassword"
                                    ng-minlength="8"
-                                   ng-maxlength="32"
+                                   ng-maxlength="16"
                             >
     <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': signupForm.signupPassword.$valid,
                                                                 'glyphicon-remove': signupForm.signupPassword.$touched && signupForm.signupPassword.$invalid
@@ -113,7 +113,7 @@
     <span class="help-block"
           ng-show="signupForm.signupPassword.$dirty && signupForm.signupPassword.$invalid"
     >
-        Pasword must be 8-32 characters long.
+        Pasword must be 8-16 characters long.
     </span>
                         </div>
 
@@ -130,7 +130,7 @@
                                    match-target="signupPassword"
                                    ng-model="signupPasswordCheck"
                                    ng-minlength="8"
-                                   ng-maxlength="32"
+                                   ng-maxlength="16"
                             >
 <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': signupForm.signupPasswordCheck.$valid,
                                                             'glyphicon-remove': signupForm.signupPasswordCheck.$touched && signupForm.signupPasswordCheck.$invalid
@@ -139,18 +139,16 @@
 <span class="help-block"
       ng-show="signupForm.signupPasswordCheck.$dirty && signupForm.signupPasswordCheck.$invalid"
 >
-    Pasword must be 8-32 characters long.
+    Pasword must be 8-16 characters long.
 </span>
                         </div>
                         <a href="#/dashboard-student"><button type="button" class="btn btn-primary btn-md btn-block" ng-disabled="signupForm.$invalid"><strong>Sign up</strong></button></a>
                         <br>
                         <h4 class="text-center"><a href="#/">Already a member?</a></h4>
+                    </form>
                 </div>
-                </form>
 
             </div>
         </div>
     </div>
 </div>
-</div>
-
