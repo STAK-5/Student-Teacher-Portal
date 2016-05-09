@@ -4,7 +4,7 @@
 
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-    padding-top: 50px;
+    padding-top: 80px;
 }
 
 
@@ -71,7 +71,7 @@ body {
  */
 
 .main {
-    padding: 20px;
+    /*padding: 20px;*/
 }
 @media (min-width: 768px) {
     .main {
@@ -118,12 +118,16 @@ body {
 }
 
 .panel .nav .nav-sidebar{
+    padding-left: 15%!important;
+}
+
+.panel .nav {
     padding-left: 15%;
 }
 
 
 .small{
-    background-color: #e1e1e1!important;
+    /*background-color: #e1e1e1!important;*/
 }
 
 .small:hover, .small:active{
@@ -134,4 +138,12 @@ body {
 li{
     cursor: pointer;
 
+}
+#sidepanel{
+    padding-top: 35px;
+}
+
+.paneledNav{
+
+    padding: 0px!important;
 }
