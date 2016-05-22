@@ -1,0 +1,4 @@
+{
+ "dbURL":"mongodb://saadabbasi:Asdf1234@ds013738.mlab.com:13738/test_mongo",
+ "secret":"monster"
+}

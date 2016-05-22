@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+	<head>
+		<title>Student Teacher Portal</title>
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/loginStyle.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/dashboard-style.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/teacher-dashboard-style.css">
+
+
+	</head>
+	<body ng-init="value = 1" ng-class="{'student-bg': value === 1 || value === 3, 'teacher-bg': value === 2}" ng-cloak>
+		<ng-view></ng-view>
+		<!--Scripts-->
+
+		<script src="javascripts/angular.js"></script>
+		<script src="javascripts/angular-route.js"></script>
+		<script src="javascripts/jquery-2.2.0.js"></script>
+		<script src="javascripts/bootstrap.min.js"></script>
+		<script src="javascripts/app.js"></script>
+		<script src="javascripts/controllers.js"></script>
+		<script src="javascripts/directives.js"></script>
+		<script src="javascripts/routes.js"></script>
+	</body>
+</html>
