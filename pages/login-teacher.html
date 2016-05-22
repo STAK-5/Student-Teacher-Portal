@@ -1,0 +1,85 @@
+<header>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand em-text navbar-left" href="#/" ng-click="tab = 1">Dawood University of Engineering and Technology</a>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
+            <div class="jumbotron jumb">
+                <ul class="nav nav-tabs nav-justified">
+                    <li role="presentation" ng-class="{ active: value === 1 || value === 3}"><a href="#/" ng-click="value = 1">Student </a>
+                    </li>
+                    <li role="presentation" ng-class="{ active: value === 2}"><a href="#/teacher-login" ng-click="value = 2">Teacher </a>
+                    </li>
+                </ul>
+
+                <div>
+                        <form class="form" role="form" id="teacherForm" name="teacherForm" novalidate>
+                            <br>
+                            <div class="form-group has-feedback"
+                                 ng-class="{'has-error': teacherForm.teacherEmail.$touched && teacherForm.teacherEmail.$invalid, 'has-success': teacherForm.teacherEmail.$valid}"
+                            >
+                                <input type="email"
+                                       id="emailField"
+                                       name="teacherEmail"
+                                       class="form-control"
+                                       placeholder="Email address"
+                                       required
+                                       ng-model="teacherEmail"
+                                       ng-model-options="{ updateOn: 'blur' }"
+                                >
+    <span  class="glyphicon form-control-feedback glyphicon-user" ng-class="{ 'glyphicon-ok': teacherForm.teacherEmail.$valid,
+                                                                'glyphicon-remove': teacherForm.teacherEmail.$touched && teacherForm.teacherEmail.$invalid
+                                                             }"
+           aria-hidden="true"></span>
+    <span class="help-block"
+          ng-show="teacherForm.teacherEmail.$dirty && teacherForm.teacherEmail.$invalid"
+    >
+        Please enter your email.
+    </span>
+                            </div>
+                            <div class="form-group has-feedback"
+                                 ng-class="{'has-error': teacherForm.teacherPassword.$touched && teacherForm.teacherPassword.$invalid, 'has-success': teacherForm.teacherPassword.$valid}"
+                            >
+                                <input type="password"
+                                       id="passwordField"
+                                       name="teacherPassword"
+                                       class="form-control"
+                                       placeholder="Password"
+                                       required
+                                       ng-model="teacherPassword"
+                                       ng-minlength="8"
+                                       ng-maxlength="16"
+                                >
+        <span  class="glyphicon form-control-feedback" ng-class="{ 'glyphicon-ok': teacherForm.teacherPassword.$valid
+                                                             }"
+               aria-hidden="true"></span>
+        <span  class="glyphicon form-control-feedback glyphicon-lock"  ng-hide="teacherForm.teacherPassword.$valid"
+               aria-hidden="true"></span>
+    <span class="help-block"
+          ng-show="teacherForm.teacherPassword.$touched && teacherForm.teacherPassword.$invalid"
+    >
+        Please enter your password.
+    </span>
+                            </div>
+                            <a href="#/dashboard-teacher"><button type="button" class="btn btn-primary btn-md btn-block" ng-disabled="teacherForm.$invalid"><strong>Sign In</strong></button></a>
+                            <h5 class="text-center"><a href="#/forgot">Forgot Password?</a></h5>
+                        </form>
+
+
+                    <footer>
+                        <nav class="nav navbar-fixed-bottom navbar-right nav-color">
+                            <div class="container">
+                                <div class="navbar-header navbar-right">
+                                    <a class="navbar-brand em-text navbar-right" href="#/" ng-click="tab = 1"><span id = "fontColor">STAK Developers</span></a>
+
+                                </div>
+                            </div>
+                        </nav>
+                    </footer>
