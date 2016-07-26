@@ -1,5 +1,5 @@
 # Angular 2 + NodeJS
-This repository holds the code for my Angular 2 + NodeJS video(s) on YouTube
+This repository holds the code for Angular 2 + NodeJS Student Teacher Portal Project.
 
 # Usage
 
