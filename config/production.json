@@ -1,4 +1,0 @@
-{
-    "dbURl":"mongodb://localhost:27017",
-    "secret": "mongoisbetterthansql"
-}
