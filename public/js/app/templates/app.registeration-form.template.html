@@ -1,0 +1,94 @@
+<div class="row">
+    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-10">
+        <form #f="ngForm" (ngSubmit)="register(f.value, f.valid)" novalidate>
+            <div class="form-group">
+                <input type="text"
+                       name="username"
+                       id="username"
+                       [(ngModel)]="registrationUser.username"
+                       required
+                       class="form-control"
+                       #username="ngModel"
+                       minlength="3"
+                       placeholder="Name">
+                <div *ngIf="username.touched && username.errors" class="alert alert-danger">
+                                <span *ngIf="username.errors.required">
+                                    Please enter your name.
+                                </span>
+                                <span *ngIf="username.errors.minlength?.requiredLength != username.errors.minlength?.actualLength">
+                                    Should be greater than 3 characters.
+                                </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text"
+                       name="rollno"
+                       id="rollno"
+                       [(ngModel)]="registrationUser.rollno"
+                       required
+                       class="form-control"
+                       #rollno="ngModel"
+                       minlength="10"
+                       maxlength="11"
+                       placeholder="Roll no.">
+                <div *ngIf="rollno.touched && rollno.errors" class="alert alert-danger">
+                                <span *ngIf="rollno.errors.required">
+                                    Please enter your roll no.
+                                </span>
+                                <span *ngIf="rollno.errors.minlength?.requiredLength != rollno.errors.minlength?.actualLength">
+                                    Incorrect roll no.
+                                </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="email"
+                       name="email"
+                       id="email"
+                       [(ngModel)]="registrationUser.email"
+                       required
+                       class="form-control"
+                       #email="ngModel"
+                       minlength="5"
+                       placeholder="Email">
+                <div *ngIf="email.touched && email.errors" class="alert alert-danger">
+                                <span *ngIf="email.errors.required">
+                                    Please enter your email id.
+                                </span>
+                                <span *ngIf="!email.valid">
+                                    Email is incorrect.
+                                </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="password"
+                       name="password"
+                       id="password"
+                       [(ngModel)]="registrationUser.password"
+                       required
+                       minlength="8"
+                       class="form-control"
+                       #password="ngModel"
+                       placeholder="Password">
+                <div *ngIf="password.touched && password.errors" class="alert alert-danger">
+                            <span *ngIf="password.errors.required"> 
+                                Please enter your password
+                            </span>
+                            <span *ngIf="password.errors.minlength?.requiredLength > password.errors.minlength?.actualLength"> 
+                                Please enter 8 characters
+                            </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-9"></div>
+                <div class="col-xs-1">
+                    <button
+                            type="submit"
+                            class="btn btn-default btn-raiseds"
+                            [ngClass]="{'btn-success': f.valid}"
+                            [disabled]="!f.valid">Register</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+    

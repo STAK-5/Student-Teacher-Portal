@@ -3,6 +3,7 @@ var map = {
     'app': 'js/app', // 'dist',
     'rxjs': 'js/vendor/rxjs',
     '@angular': 'js/vendor/@angular'
+
 };
 
 // packages tells the System loader how to load when no filename and/or no extension

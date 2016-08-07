@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Important Uploads</div>
+    <div class="table-responsive table-stripped pre-scrollable">
+        <!-- Table -->
+        <table class="table table-hover pre-scrollable">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>File Type</th>
+                <th>Important Note</th>
+                <th>File Size</th>
+                <th>Uploaded By</th>
+                <th>Download</th>
+            </tr>
+            </thead>
+            <tbody class="pre-scrollable">
+            <!--<tr >
+                <td>{{ File.Title }}</td><td>{{ File.Type }}</td><td>{{ File.important }}</td><td>{{ File.size }}</td><td>{{ File.uploader }}</td><td><div class="form-group has-feedback"><button value="Download" class="btn btn-success"><span class="glyphicon glyphicon-save-file"></span>&nbsp; Download &nbsp;</button></div></td>
+            </tr>-->
+            <tr *ngFor="let file of files;">
+                <td> {{file.title}} </td><td> {{file.mime}} </td><td> {{file.impnote}} </td><td> {{file.size/100000}}mb </td><td> {{file.uploader}} </td><td><div class="form-group has-feedback"><button value="Download" class="btn btn-success"><span class="glyphicon glyphicon-save-file"></span>&nbsp; Download &nbsp;</button></div></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
