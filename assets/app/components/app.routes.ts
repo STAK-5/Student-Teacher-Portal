@@ -7,14 +7,15 @@ import { StpLoginPage } from './app.login-page.component'
 import { StpRegistrationPage } from './app.registration-page.component';
 import { StpDashboard } from './app.dashboard.component';
 import { StpTeacherDashboard } from "./app.teacher-dashboard.component";
-
+import { AuthManager } from './../Services/authmanager.service';
 
 const routes: RouterConfig = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },           //This should always remain on top
 
     {
         path: 'login',
-        component: StpLoginPage
+        component: StpLoginPage,
+        canActivate: [AuthManager]
     },
 
     {
@@ -24,7 +25,8 @@ const routes: RouterConfig = [
 
     {
         path: 'home',
-        component: StpDashboard
+        component: StpDashboard,
+        canActivate: [AuthManager]
     },
 
     {

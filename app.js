@@ -6,7 +6,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var appRoutes = require('./routes/app');
-
+var userRoutes = require('./routes/users');
+var mongodb = require('mongodb');
+var mongoose = require('mongoose');
 var app = express();
 
 // view engine setup
@@ -29,6 +31,8 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', appRoutes);
+// adding my custom routes;
+app.use('/users', userRoutes);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

@@ -3,7 +3,7 @@
  */
 
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router'
 import { StpSideBar } from './app.sidebar.component';
 import { StpDownloadPanel } from './app.download-panel.component';
 
@@ -17,7 +17,7 @@ import { StpDownloadPanel } from './app.download-panel.component';
 export class StpDashboard {
     files: Object[] = [];
 
-    constructor(){
+    constructor(private _router: Router){
         this.files = [
             {
                 title: 123,
@@ -27,6 +27,12 @@ export class StpDashboard {
                 title: 3
             }
         ]
+    }
+
+    logout(){
+        console.log('loged out');
+        window.localStorage.removeItem('auth-key');
+        this._router.navigate(['/login']);
     }
 
 }

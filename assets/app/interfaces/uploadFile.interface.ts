@@ -9,5 +9,4 @@ export interface UploadFile{
     subject: string,
     file: any,
     note: string
-
 }
